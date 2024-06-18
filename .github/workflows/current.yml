@@ -56,6 +56,10 @@ jobs:
       with:
         distribution: 'temurin'
         java-version: 21
+    - name: Set up Maven
+      uses: stCarolas/setup-maven@v5
+      with:
+        maven-version: 3.9.6
     - name: Build with Maven
       run: |
         git clone https://${{ secrets.GIT_USERNAME }}:${{ secrets.GIT_TOKEN }}@github.com/stellartrails/stellartrails
